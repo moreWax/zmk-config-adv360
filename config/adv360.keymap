@@ -26,7 +26,9 @@
             bindings = <&kp P>;
             key-positions = <43 44>;
             layers = <0>;
-            timeout-ms = <0>;
+            timeout-ms = <50>;
+            slow-release;
+            require-prior-idle-ms = <100>;
         };
     };
 
