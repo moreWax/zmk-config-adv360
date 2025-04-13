@@ -24,7 +24,7 @@
 
         p_combo {
             bindings = <&kp P>;
-            key-positions = <43 44>;
+            key-positions = <44 43>;
             layers = <0>;
             timeout-ms = <50>;
             slow-release;
@@ -37,11 +37,11 @@
 
         default_layer {
             bindings = <
-&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5    &tog 1   &mo 3           &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &kp MINUS
-&kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T     &none    &macro_kinesis  &kp Y      &kp U      &kp I      &kp O      &kp P      &kp BSLH
-&kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G     &none    &kp LCTRL       &kp LALT                         &kp LGUI   &kp RCTRL  &none      &kp H     &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B     &none    &none           &kp HOME   &none      &none      &kp PG_UP  &none      &none      &kp N     &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-&mo 2      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT  &kp BKSP  &kp DEL  &kp END         &kp PG_DN  &kp ENTER  &kp SPACE  &kp UP     &kp DOWN   &kp LBKT   &kp RBKT  &mo 2
+&kp EQUAL  &kp N1     &kp N2    &kp N3              &kp N4       &kp N5         &tog 1   &mo 3           &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &kp MINUS
+&kp TAB    &kp Q      &kp W     &kp E               &kp R        &kp T          &none    &macro_kinesis  &kp Y      &kp U      &kp I      &kp O      &kp P      &kp BSLH
+&kp ESC    &kp A      &kp S     &hm LEFT_COMMAND D  &lt 4 F      &hm SPACE G    &none    &kp LCTRL       &kp LALT                         &kp LGUI   &kp RCTRL  &none      &hm BACKSPACE H  &kp J  &hm RIGHT_COMMAND K  &kp L    &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z      &kp X     &hm RG(C) C         &hm RG(V) V  &hm B ENTER    &none    &none           &kp HOME   &none      &none      &kp PG_UP  &none      &none      &hm DELETE N     &kp M  &kp COMMA            &kp DOT  &kp FSLH  &kp RSHFT
+&mo 2      &kp GRAVE  &kp CAPS  &kp LEFT            &kp RIGHT    &kp BACKSPACE  &kp DEL  &kp END         &kp PG_DN  &kp ENTER  &kp SPACE  &kp UP     &kp DOWN   &kp LBKT   &kp RBKT         &mo 2
             >;
         };
 
@@ -72,6 +72,16 @@
 &none  &none         &none         &none         &none         &none            &rgb_ug RGB_MEFS_CMD 5  &bt BT_CLR   &bt BT_CLR                                   &bt BT_CLR    &bt BT_CLR    &rgb_ug RGB_MEFS_CMD 5  &none  &none  &none  &none  &none  &none
 &none  &none         &none         &none         &none         &none            &none                   &none        &none         &none         &none            &none         &none         &none                   &none  &none  &none  &none  &none  &none
 &none  &none         &none         &bl BL_INC    &bl BL_DEC    &rgb_ug RGB_TOG  &bl BL_TOG              &none        &none         &bl BL_TOG    &rgb_ug RGB_TOG  &bl BL_INC    &bl BL_DEC    &none                   &none  &none
+            >;
+        };
+
+        tap_layer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &kp LEFT  &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans        &trans          &trans           &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans
             >;
         };
     };
