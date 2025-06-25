@@ -6,13 +6,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container:
-      image: zmkfirmware/zmk-build-arm:0.2.8
+      image: zmkfirmware/zmk-build-arm:2.4
     name: Build
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v2
       - name: Cache west modules
-        uses: actions/cache@v4
+        uses: actions/cache@v2
         env:
           cache-name: cache-zephyr-modules
         with:
@@ -50,7 +50,7 @@ jobs:
       - name: Rename zmk.uf2
         run: cp build/left/zephyr/zmk.uf2 left.uf2 && cp build/right/zephyr/zmk.uf2 right.uf2
       - name: Archive (Adv360)
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v2
         with:
           name: firmware
           path: |
